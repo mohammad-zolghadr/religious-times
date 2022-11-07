@@ -1,5 +1,7 @@
 import React from "react";
 
+import style from "./ResultComponent.module.css";
+
 const ResultComponent = (props) => {
   const {
     CityName,
@@ -22,19 +24,36 @@ const ResultComponent = (props) => {
       return result;
     } else return time.replace("AM", "");
   };
+
   return (
-    <div>
-      <div>
-        <p>اسم شهر : {CityName}</p>
-        <p>تاریخ امروز(شمسی) : {hourFormat24(Today)}</p>
-        <p>تاریخ امروز(قمری) : {TodayQamari}</p>
-        <p>اذان صبح : {Imsaak}</p>
-        <p>طلوع آفتاب : {Sunrise}</p>
-        <p>اذان ظهر : {Noon}</p>
-        <p>غروب آفتاب : {Sunset}</p>
-        <p>اذان مغرب : {Maghreb}</p>
-        <p>نیمه شب شرعی : {Midnight}</p>
-      </div>
+    <div className={style.resultContainer}>
+      <p>
+        اسم شهر : <span>{CityName}</span>
+      </p>
+      <p>
+        تاریخ شمسی : <span>{hourFormat24(Today)}</span>
+      </p>
+      <p>
+        تاریخ قمری : <span>{TodayQamari}</span>
+      </p>
+      <p>
+        اذان صبح : <span>{Imsaak}</span>
+      </p>
+      <p>
+        طلوع آفتاب : <span>{Sunrise}</span>
+      </p>
+      <p>
+        اذان ظهر : <span>{Noon}</span>
+      </p>
+      <p>
+        غروب آفتاب : <span>{Sunset}</span>
+      </p>
+      <p>
+        اذان مغرب : <span>{Maghreb}</span>
+      </p>
+      <p>
+        نیمه شب شرعی : <span>{Midnight}</span>
+      </p>
     </div>
   );
 };
