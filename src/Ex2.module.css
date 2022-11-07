@@ -1,0 +1,37 @@
+.postsContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: 100px auto;
+}
+
+.postsContainer > div{
+    flex: 1 1 350px;
+    height: 200px;
+    background-color: #f8f8f8;
+    margin: 15px;
+    padding: 0 20px 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.postsContainer h3{
+    color: #a22;
+}
+
+.postsContainer p{
+    text-align: justify;
+    color: #898989;
+    font-size: 0.85rem;
+}
+
+.postsContainer > div span{
+    background-color: #ff8c8c;
+    color: #c40808;
+    margin: 5px;
+    padding: 0 5px;
+    font-weight: bold;
+    font-size: 0.7rem;
+}
