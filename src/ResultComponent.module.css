@@ -20,5 +20,5 @@
 
 .resultContainer span{
     font-family: bf;
-    color: #452893;
+    color: var(--secondary-color);
 }

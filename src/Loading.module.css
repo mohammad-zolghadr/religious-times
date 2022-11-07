@@ -1,0 +1,18 @@
+.loadingCircle{
+    width: 70px;
+    height: 70px;
+    border: 8px solid var(--secondary-color);
+    border-radius: 50%;
+    border-bottom: 8px solid #fff;
+    animation:rotating 1s linear infinite ;
+    margin-top: 100px;
+}
+
+@keyframes rotating{
+    from{
+        transform: rotate(0);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}

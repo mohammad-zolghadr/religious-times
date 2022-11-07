@@ -14,7 +14,7 @@
 
 .CitiesComponentContainer button{
     flex: 1 1 70px;
-    background-color: #f7d998;
+    background-color: var(--primary-color);
     padding: 10px 15px;
     color: #444444;
     margin: 5px;

@@ -3,6 +3,7 @@ import axios from "axios";
 
 // Components
 import ResultComponent from "./ResultComponent";
+import Loading from "./Loading";
 
 import style from "./CitiesComponent.module.css";
 
@@ -79,7 +80,7 @@ const CitiesComponent = () => {
             )
         )}
       </div>
-      {isLoading && <h3>در حال بارگذاری</h3>}
+      {isLoading && <Loading />}
       {dataFetched && !isLoading && <ResultComponent data={dataFetched} />}
     </div>
   );

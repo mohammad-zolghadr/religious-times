@@ -15,6 +15,9 @@
   border: none;
   text-decoration: none;
   direction: rtl;
+
+  --primary-color : #f7d998;
+  --secondary-color : #452893;
 }
 
 html{
