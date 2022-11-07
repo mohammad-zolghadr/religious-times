@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
-import style from "./Ex1.module.css";
+// Components
+import ResultComponent from "./ResultComponent";
+
+import style from "./CitiesComponent.module.css";
 
 const BASE_URL = "https://prayer.aviny.com/api/prayertimes";
 const cityArray = [
@@ -47,7 +50,7 @@ const cityArray = [
   "یاسوج",
 ];
 
-const Ex1 = () => {
+const CitiesComponent = () => {
   const [dataFetched, setDataFetched] = useState();
   const [isLoading, setIsLoading] = useState(false);
 
@@ -64,7 +67,7 @@ const Ex1 = () => {
   };
 
   return (
-    <div className={style.Ex1Container}>
+    <div className={style.CitiesComponentContainer}>
       <div>
         {cityArray.map(
           (element, index) =>
@@ -76,21 +79,9 @@ const Ex1 = () => {
         )}
       </div>
       {isLoading && <h3>در حال بارگذاری</h3>}
-      {dataFetched && !isLoading && (
-        <div className={style.resultContainer}>
-          <p>اسم شهر : {dataFetched.CityName}</p>
-          <p>تاریخ امروز(شمسی) : {dataFetched.Today}</p>
-          <p>تاریخ امروز(قمری) : {dataFetched.TodayQamari}</p>
-          <p>اذان صبح : {dataFetched.Imsaak}</p>
-          <p>طلوع آفتاب : {dataFetched.Sunrise}</p>
-          <p>اذان ظهر : {dataFetched.Noon}</p>
-          <p>غروب آفتاب : {dataFetched.Sunset}</p>
-          <p>اذان مغرب : {dataFetched.Maghreb}</p>
-          <p>نیمه شب شرعی : {dataFetched.Midnight}</p>
-        </div>
-      )}
+      {dataFetched && !isLoading && <ResultComponent data={dataFetched} />}
     </div>
   );
 };
 
-export default Ex1;
+export default CitiesComponent;

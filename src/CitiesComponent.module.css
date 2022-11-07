@@ -1,4 +1,4 @@
-.Ex1Container , .resultContainer{
+.CitiesComponentContainer{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -7,14 +7,14 @@
     margin: auto;
 }
 
-.Ex1Container > div{
+.CitiesComponentContainer > div{
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
 }
 
-.Ex1Container button{
+.CitiesComponentContainer button{
     flex: 1 1 70px;
     background-color: #81b8c5;
     color: #2220a1;
@@ -29,6 +29,6 @@
     transition: 0.3s;
 }
 
-.Ex1Container button:hover{
+.CitiesComponentContainer button:hover{
     opacity: 0.5;
 }
