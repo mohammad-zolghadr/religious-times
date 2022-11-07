@@ -21,8 +21,12 @@ const ResultComponent = (props) => {
     if (timeSplited[1].includes("PM")) {
       const temp = timeSplited[1].replace("PM", "").split(":");
       result = `${timeSplited[0]} - ${+temp[0] + 12}:${temp[1]}`;
-      return result;
-    } else return time.replace("AM", "");
+    } else {
+      if (timeSplited[1].includes("12"))
+        result = time.replace("12", "00").replace("AM", "");
+      else result = time.replace("AM", "");
+    }
+    return result;
   };
 
   return (
