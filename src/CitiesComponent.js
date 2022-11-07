@@ -68,6 +68,7 @@ const CitiesComponent = () => {
 
   return (
     <div className={style.CitiesComponentContainer}>
+      <h3>برای مشاهده اوقات شرعی، روی یکی از شهر های زیر کلیک کن</h3>
       <div>
         {cityArray.map(
           (element, index) =>

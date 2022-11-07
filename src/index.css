@@ -1,13 +1,67 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@font-face {
+  font-family: nf;
+  src: url("./assets/fonts/Kalameh\(FaNum\)-Regular.ttf");
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@font-face {
+  font-family: bf;
+  src: url("./assets/fonts/Kalameh\(FaNum\)-Bold.ttf");
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  direction: rtl;
+}
+
+html{
+  font-family: nf;
+}
+
+body{
+  width: 90%;
+  margin:0 auto 100px;
+  padding-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+h3{
+  font-size: 1rem;
+  font-family: bf;
+  color: #545454;
+}
+
+button{
+  font-family: bf;    
+  font-size: 0.8rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+button:hover{
+  opacity: 0.5;
+}
+
+@media (min-width:620px){
+  body{
+    width: 75%;
+  }
+}
+
+@media (min-width:850px){
+  body{
+    width: 60%;
+  }
+}
+
+@media (min-width:850px){
+  body{
+    width: 45%;
+  }
 }
