@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import axios from "axios";
 
 // Components
@@ -6,50 +6,7 @@ import ResultComponent from "./ResultComponent";
 import Loading from "./Loading";
 
 import style from "./CitiesComponent.module.css";
-
-const BASE_URL = "https://prayer.aviny.com/api/prayertimes";
-const cityArray = [
-  "",
-  //1
-  "تهران",
-  "اصفهان",
-  "ارومیه",
-  "اراک",
-  //5
-  "اهواز",
-  "تبریز",
-  "بندرعباس",
-  "شیراز",
-  "کرج",
-  // 10
-  "قزوین",
-  "قم",
-  "زاهدان",
-  "مشهد",
-  "یزد",
-  // 15
-  "بجنورد",
-  "رشت",
-  "ساری",
-  "گرگان",
-  "کرمان",
-  // 20
-  "بوشهر",
-  "کرمانشاه",
-  "سنندج",
-  "مهاباد",
-  "همدان",
-  // 25
-  "زنجان",
-  "اردبیل",
-  "سمنان",
-  "",
-  "ایلام",
-  // 30
-  "خرم آباد",
-  "شهرکرد",
-  "یاسوج",
-];
+import { cityArray } from "./cityArray";
 
 const CitiesComponent = () => {
   const [dataFetched, setDataFetched] = useState();
@@ -58,7 +15,7 @@ const CitiesComponent = () => {
   const getData = (index) => {
     setIsLoading(true);
     axios
-      .get(`${BASE_URL}/${index}`)
+      .get(`/${index}`)
       .then((res) => {
         setIsLoading(false);
         setDataFetched(res.data);
@@ -69,6 +26,7 @@ const CitiesComponent = () => {
 
   return (
     <div className={style.CitiesComponentContainer}>
+      {console.log(cityArray)}
       <h3>برای مشاهده اوقات شرعی، روی یکی از شهر های زیر کلیک کن</h3>
       <div>
         {cityArray.map(
